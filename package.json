@@ -12,6 +12,7 @@
   },
   "dependencies": {
     "cookie": "^0.4.1",
+    "dotenv": "^16.4.5",
     "lowdb": "^2.1.0",
     "lru-cache": "^6.0.0",
     "moment": "^2.29.1",
