@@ -253,7 +253,7 @@ export default function Home() {
                     <div className="divider"></div>
 
                     <h2 className="wedding-subtitle">
-                      "Como llama divina es el fuego ardiente del amor. Ni las muchas aguas pueden apagarlo, ni los ríos pueden extinguirlo" Cantares 8:6
+                      Como llama divina es el fuego ardiente del amor. Ni las muchas aguas pueden apagarlo, ni los ríos pueden extinguirlo. Cantares 8:6
                     </h2>
                   </div>
                 </div>
