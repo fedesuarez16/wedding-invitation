@@ -70,6 +70,7 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
+  z-index: 100;
 }
 
 .wedding-row {
@@ -89,6 +90,7 @@ body {
 .display-table-cell {
   display: table-cell;
   vertical-align: middle;
+  z-index: 100;
 }
 
 
@@ -100,6 +102,7 @@ body {
   color: beige;
   margin-bottom: 20px;
   font-family: "Sacramento", Arial, serif;
+  z-index: 1000;
 }
 
 
@@ -126,6 +129,8 @@ body {
   .wedding-title {
     font-size: 3.5em;
     font-weight: 500;
+    z-index: 10 !important;
+
   }
 
 
@@ -134,12 +139,15 @@ body {
     left: 300px !important;
     height: 140% !important;
     opacity: 80%;
+    z-index: 0;
   }
 
   .icon-right {
     right: 550px !important;
     top: 800px !important;
     opacity: 80%;
+    z-index: 0;
+
   }
 
 }
@@ -152,6 +160,7 @@ body {
   top: 1%;
   transform: translateY(-50%);
   height: 100%;
+  z-index: 1;
 }
 
 .icon-left {
@@ -159,6 +168,7 @@ body {
   left: -100px;
   top: 200px;
   width: 100%;
+  z-index: 1;
 
 
 }
@@ -265,6 +275,70 @@ figure {
 }
 
 
+.custom-modal-backdrop {
+  background-color: rgba(0, 0, 0, 0.5);
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+}
+
+.custom-modal-dialog {
+  max-width: 500px;
+  width: 90%;
+}
+
+.custom-modal-content {
+  background-color: #f7e1c1;
+  border-radius: 20px;
+  padding: 20px;
+  position: relative;
+  text-align: center;
+}
+
+.custom-modal-header {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.custom-modal-header h4 {
+  margin: 0 auto;
+  font-size: 1.5rem;
+  color: #a35555;
+}
+
+.custom-modal-close {
+  cursor: pointer;
+  font-size: 1.5rem;
+  border: none;
+  background: none;
+  color: #a35555;
+}
+
+.custom-modal-body {
+  padding: 20px 0;
+}
+
+.custom-modal-footer button {
+  background-color: #e3b67a;
+  border: none;
+  color: white;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.custom-modal-footer button:hover {
+  background-color: #d3a56a;
+}
+
+
+
 
 .invitation-container {
   background-image: url('/images/rugoso.jpg');
@@ -273,6 +347,7 @@ figure {
   padding: 20px;
   text-align: center;
   color: #8c3d3d;
+
   /* Cambia esto al color exacto que desees */
 }
 
@@ -286,6 +361,14 @@ figure {
   background-color: #ff6f61;
   margin: 20px auto;
   border-radius: 5px;
+}
+
+.dividertwo {
+  width: 180px;
+  height: 1px;
+  background-color: #8c3d3d;
+  margin: 10px auto;
+  border-radius: 1px;
 }
 
 .logo {
@@ -304,6 +387,7 @@ figure {
 
 .detail {
   margin-bottom: 20px;
+  z-index: 100;
 }
 
 h1 {
@@ -323,7 +407,7 @@ h2 {
 p {
   font-size: 1.2rem;
   margin-bottom: 10px;
-  color: #8c3d3d;
+  color: #191919;
 }
 
 button {
@@ -331,10 +415,13 @@ button {
   color: white;
   border: none;
   padding: 10px 20px;
-  border-radius: 5px;
+  border-radius: 20px;
   cursor: pointer;
   font-size: 1rem;
   transition: background-color 0.3s ease;
+  z-index: 100;
+  position: relative;
+  font-weight: 600;
 }
 
 button:hover {
@@ -342,8 +429,7 @@ button:hover {
 }
 
 button.inactive {
-  background-color: #e8b4b4;
-  cursor: not-allowed;
+  background-color: #b26b6b;
 }
 
 button.inactive:hover {

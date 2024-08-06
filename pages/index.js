@@ -94,14 +94,54 @@ export default function Home() {
   const modalData = {
     dressCode: {
       title: "Dress Code",
-      content: "Formal attire is required.",
+      content: "Elegante Sport",
     },
     tipsNotas: {
       title: "Tips y Notas",
-      content: "Be sure to arrive on time and enjoy the celebration.",
+      content: "Recomendamos llegar temprano (ser puntuales, y cuidar la limpieza del patio).",
+    },
+    Tarjeta: {
+      title: "Tarjeta",
+      content: `
+      Valor de la tarjeta:
+      Precio adultos: $13.500
+      Precio menores: $8.000
+
+      Fecha límite de pago: La mitad se paga hasta el 20 de agosto y la otra mitad 20 días antes de la fiesta.
+    `,
+      contentt: `CBU
+4530000800010294878858
+
+Alias
+Ramita.24
+
+Caja de ahorros en pesos
+1029487885
+
+Titular
+Ramiro Exequiel Garcia Olivera
+
+CUIL
+20-43692244-3
+
+Naranja X`
+
     },
   };
 
+
+  const handleConfirmAttendance = () => {
+    window.open('https://wa.me//+5493804664286?text=hola%20confirmo%20asistencia', '_blank');
+  };
+
+  const handleMusic = () => {
+    window.open('https://wa.me/+5493804664286?text=hola%20quiero%20sugerir%20esta%20cancion', '_blank');
+  };
+
+  const handleAddToCalendar = () => {
+    const calendarUrl = 'https://www.google.com/calendar/render?action=TEMPLATE&text=Ceremonia%20y%20Fiesta&dates=20250420T103000Z/20250420T113000Z&details=Detalles%20de%20la%20fiesta&location=Av.%20Bartolomé%20de%20Castro%202100,%20Catamarca';
+    window.open(calendarUrl, '_blank');
+  };
 
 
   const startDatetime = moment("2021-10-10 13:00").tz("Asia/Jakarta");
@@ -276,29 +316,32 @@ export default function Home() {
           <div className="header">
             <h1>Ceremonia y Fiesta</h1>
           </div>
+          <div className="dividertwo"></div>
+
           <div className="details">
             <div className="detail">
               <h2>Día</h2>
-              <p>Sábado 4 de noviembre de 2023<br />20:15 hs</p>
-              <button>AGENDAR</button>
-            </div>
-            <div className="detail">
-              <h2>Lugar</h2>
-              <p>Salón María Luisa</p>
-              <button>CONFIRMAR ASISTENCIA</button>
-            </div>
-            <div className="detail">
-              <h2>Dirección</h2>
-              <p>Av. Bartolomé de Castro 2100, Catamarca</p>
-              <button className="inactive">¿CÓMO LLEGAR?</button>
+              <p>20 de Abril 2025<br />10:30AM</p>
+              <button onClick={handleAddToCalendar}>AGENDAR</button>
             </div>
             <div className="detail">
               <h2>Tarjeta</h2>
               <p>Conoce todos los detalles sobre la tarjeta</p>
-              <button>VER MÁS</button>
+              <button className="button" onClick={() => openModal(modalData.Tarjeta)}>VER MÁS</button>
+            </div>
+            <div className="detail">
+              <h2>Lugar</h2>
+              <p>Salon de fiestas "Casa de tico"</p>
+              <button onClick={handleConfirmAttendance}>CONFIRMAR ASISTENCIA</button>
+            </div>
+            <div className="detail">
+              <h2>Dirección</h2>
+              <p>Av. Bartolomé de Castro 2100, Catamarca</p>
+              <button onClick={() => window.open('https://maps.app.goo.gl/M5X3yCP9pXA3PV5c8?g_st=aw', '_blank')}>¿CÓMO LLEGAR?</button>
             </div>
           </div>
         </div>
+
 
         <div className="party-details-container">
           <h1>Fiesta</h1>
@@ -308,7 +351,7 @@ export default function Home() {
               <div className="icon music-icon"></div>
               <h2>Música</h2>
               <p>¿Cuál es la canción que no debe faltar en la PlayList de la fiesta?</p>
-              <button>SUGERIR CANCIÓN</button>
+              <button onClick={handleMusic}>SUGERIR CANCION</button>
             </div>
             <div className="card">
               <div className="icon dress-code-icon"></div>
@@ -324,22 +367,21 @@ export default function Home() {
             </div>
           </div>
         </div>
-
         {modalContent && (
-          <div className="modal fade in" tabIndex="-1" role="dialog" style={{ display: "block", backgroundColor: "rgba(0, 0, 0, 0.5)" }}>
-            <div className="modal-dialog" role="document">
-              <div className="modal-content">
-                <div className="modal-header">
-                  <button type="button" className="close" onClick={closeModal}>
-                    <span>&times;</span>
-                  </button>
+          <div className="custom-modal-backdrop">
+            <div className="custom-modal-dialog" role="document">
+              <div className="custom-modal-content">
+                <div className="custom-modal-header">
                   <h4 className="modal-title">{modalContent.title}</h4>
                 </div>
-                <div className="modal-body">
+                <div className="custom-modal-body">
                   <p>{modalContent.content}</p>
+                  <p>{modalContent.contentt}</p>
+
+
                 </div>
-                <div className="modal-footer">
-                  <button type="button" className="btn btn-default" onClick={closeModal}>Close</button>
+                <div className="custom-modal-footer">
+                  <button type="button" onClick={closeModal}>Cerrar</button>
                 </div>
               </div>
             </div>
@@ -372,8 +414,7 @@ export default function Home() {
             <div className="row">
               <div className="col-md-8 col-md-offset-2 text-center fh5co-heading animate-box">
                 <h2>Confirma tu asistencia!</h2>
-                <p>Coming Soon!</p>
-                <p>(Ditunggu ya, kita belum foto post weddingnya)</p>
+                <p>Nos vemos!</p>
               </div>
             </div>
 
@@ -391,38 +432,20 @@ export default function Home() {
                 <p>
                   <small className="block">
                     &copy; {new Date().getFullYear()} {""}
-                    <Link href="https://afif.dev" passHref>
-                      <a>afif.dev</a>
-                    </Link>
+                    <a>Mika&Rami</a>
+
                     . All Rights Reserved.
                   </small>
                   <small className="block">
-                    Thanks for Design{" "}
-                    <Link href="https://freehtml5.co/" passHref>
+                    Hecho por{" "}
+                    <Link href="https://flipwebco.com./" passHref>
                       <a target="_blank" rel="noreferrer">
-                        FREEHTML5.co
+                        flipwebco
                       </a>
                     </Link>
                   </small>
-                  <small className="block">
-                    Thanks for Music{" "}
-                    <Link href="https://youtu.be/_pR_cW4bDeE" passHref>
-                      <a target="_blank" rel="noreferrer">
-                        Ungu Feat. Andien - Saat Bahagia | VC Trinity
-                      </a>
-                    </Link>
-                  </small>
-                  <small>
-                    Thanks for Backgrounds{" "}
-                    <Link
-                      href="https://www.freepik.com/photos/background"
-                      passHref
-                    >
-                      <a target="_blank" rel="noreferrer">
-                        Background photo created by jcomp - www.freepik.com
-                      </a>
-                    </Link>
-                  </small>
+
+
                 </p>
                 <ul className="fh5co-social-icons">
                   <li>
