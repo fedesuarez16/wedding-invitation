@@ -197,11 +197,7 @@ Naranja X`
         <title>Boda &mdash; Mika & Rami</title>
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <meta name="description" content="Invitacion de Mika & Rami" />
-        <meta
-          name="keywords"
-          content=" "
-        />
-        <meta name="author" content="afif.dev" />
+
 
       </Head>
       {/* modernizr */}
