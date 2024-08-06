@@ -1,0 +1,109 @@
+
+        {/* couple story */}
+        <div id="fh5co-couple-story">
+          <div className="container">
+            <div className="row">
+              <div className="col-md-8 col-md-offset-2 text-center fh5co-heading animate-box">
+                <h2>Cerita Kami</h2>
+                <p>
+                  Perjalanan singkat kami mulai saat pertama kali kenal, bertemu
+                  kembali, hingga menjadi pasangan sah.
+                </p>
+              </div>
+            </div>
+            <div className="row">
+              <div className="col-md-12 col-md-offset-0">
+                <ul className="timeline animate-box">
+                  <li className="animate-box">
+                    <div
+                      className="timeline-badge"
+                      style={{ backgroundImage: "url(/images/couple-1.jpg)" }}
+                    ></div>
+                    <div className="timeline-panel">
+                      <div className="timeline-heading">
+                        <h3 className="timeline-title">
+                          Saat Jadi Teman Sekelas
+                        </h3>
+                        <span className="date">2012</span>
+                      </div>
+                      <div className="timeline-body">
+                        <p>
+                          Di sekolah SMPN 37 Surabaya, Kami menjadi teman
+                          sekelas, yaitu saat memasuki kelas 9 yang dimana saat
+                          itu tahun ajarannya adalah 2012. Kami tidak begitu
+                          akrab, hanya sekedar kenal saja.
+                        </p>
+                      </div>
+                    </div>
+                  </li>
+                  <li className="timeline-inverted animate-box">
+                    <div
+                      className="timeline-badge"
+                      style={{ backgroundImage: "url(/images/couple-2.jpg)" }}
+                    ></div>
+                    <div className="timeline-panel">
+                      <div className="timeline-heading">
+                        <h3 className="timeline-title">Ketemu Lagi</h3>
+                        <span className="date">Desember 2017</span>
+                      </div>
+                      <div className="timeline-body">
+                        <p>
+                          Kami dipertemukan kembali pada tempat kerja yang
+                          bersebelahan, tempat kerja kami hanya beda gedung
+                          saja. Saat itu Afif bertempat kerja di Graha Bumi
+                          Surabaya, sedangkan Rianti bertempat kerja di Hotel
+                          Bumi Surabaya. Kami mulai berkenalan dan saling sapa
+                          lewat sosial media. Disinilah awal kami mulai PDKT dan
+                          berpacaran :).
+                        </p>
+                      </div>
+                    </div>
+                  </li>
+                  <li className="animate-box">
+                    <div
+                      className="timeline-badge"
+                      style={{ backgroundImage: "url(/images/couple-3.jpg)" }}
+                    ></div>
+                    <div className="timeline-panel">
+                      <div className="timeline-heading">
+                        <h3 className="timeline-title">Lamaran</h3>
+                        <span className="date">20 Desember 2020</span>
+                      </div>
+                      <div className="timeline-body">
+                        <p>
+                          3 tahun lamanya kami berpacaran dan mulai memutuskan
+                          untuk ke langkah yang lebih jauh lagi. Afif mulai
+                          berniat melamar pasangannya, Rianti dengan bismillah
+                          tawakallah
+                        </p>
+                      </div>
+                    </div>
+                  </li>
+                  <li className="timeline-inverted animate-box">
+                    <div
+                      className="timeline-badge"
+                      style={{ backgroundImage: "url(/images/couple-4.jpg)" }}
+                    ></div>
+                    <div className="timeline-panel">
+                      <div className="timeline-heading">
+                        <h3 className="timeline-title">Akad Nikah</h3>
+                        <span className="date">15 Juli 2021</span>
+                      </div>
+                      <div className="timeline-body">
+                        <p>
+                          Alhamdulillah, dengan ridho Allah SWT, Afif melangkah
+                          lebih jauh lagi dengan meminang pasangannya, Rianti
+                          menjadi istri sah. Banyak rintangan yang kami hadapi,
+                          salah satunya kondisi pandemi Covid-19 yang lagi
+                          tinggi saat itu, harus melakukan syarat dan anjuran
+                          pemerintah dengan orang yang terbatas. Akan tetapi,
+                          Alhamdulillah acara berjalan dengan lancar
+                        </p>
+                      </div>
+                    </div>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>

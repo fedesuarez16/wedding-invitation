@@ -30,6 +30,164 @@ body {
   transition: 0.5s;
 }
 
+
+#wedding-header {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+}
+
+.wedding-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+/* Imagen para dispositivos de escritorio */
+@media (min-width: 769px) {
+  #wedding-header {
+    background-image: url('/images/bge.jpeg');
+    background-size: cover;
+  }
+}
+
+/* Imagen para dispositivos móviles */
+@media (max-width: 768px) {
+  #wedding-header {
+    background-image: url('/images/bg2.jpeg');
+    background-size: cover;
+
+  }
+}
+
+
+.wedding-container {
+  position: relative;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.wedding-row {
+  width: 100%;
+}
+
+.wedding-col {
+  margin: 0 auto;
+}
+
+.display-table {
+  display: table;
+  width: 100%;
+  height: 100%;
+}
+
+.display-table-cell {
+  display: table-cell;
+  vertical-align: middle;
+}
+
+
+
+
+
+.wedding-title {
+  font-size: 6em;
+  color: beige;
+  margin-bottom: 20px;
+  font-family: "Sacramento", Arial, serif;
+}
+
+
+.wedding-subtitle {
+  font-size: 1em;
+  color: white;
+  margin-bottom: 40px;
+  margin-left: 180px;
+  margin-right: 180px;
+
+}
+
+@media (max-width: 768px) {
+  .wedding-subtitle {
+
+    margin-left: 20px;
+    margin-right: 20px;
+    font-weight: 400;
+    font-size: 15px;
+
+
+  }
+
+  .wedding-title {
+    font-size: 3.5em;
+    font-weight: 500;
+  }
+
+
+
+  .icon-left {
+    left: 300px !important;
+    height: 140% !important;
+    opacity: 80%;
+  }
+
+  .icon-right {
+    right: 550px !important;
+    top: 800px !important;
+    opacity: 80%;
+  }
+
+}
+
+
+
+.icon-left,
+.icon-right {
+  position: fixed;
+  top: 1%;
+  transform: translateY(-50%);
+  height: 100%;
+}
+
+.icon-left {
+  right: 500px;
+  left: -100px;
+  top: 200px;
+  width: 100%;
+
+
+}
+
+.icon-right {
+  right: 0;
+  left: 10;
+  bottom: 700px;
+  width: 10%;
+
+
+}
+
+
+
+
+.simply-countdown-one {
+  margin-bottom: 20px;
+}
+
+.calendar-dropdown {
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 1em;
+}
+
 .offcanvas #page {
   overflow: hidden;
   position: absolute;
@@ -50,7 +208,7 @@ body {
 }
 
 a {
-  color: #F14E95;
+  color: #af8000;
   -webkit-transition: 0.5s;
   -o-transition: 0.5s;
   transition: 0.5s;
@@ -59,7 +217,7 @@ a {
 a:hover,
 a:active,
 a:focus {
-  color: #F14E95;
+  color: #cb7b0c;
   outline: none;
   text-decoration: none;
 }
@@ -83,17 +241,17 @@ figure {
 
 ::-webkit-selection {
   color: #fff;
-  background: #F14E95;
+  background: #cb7b0c;
 }
 
 ::-moz-selection {
   color: #fff;
-  background: #F14E95;
+  background: #cb7b0c;
 }
 
 ::selection {
   color: #fff;
-  background: #F14E95;
+  background: #cb7b0c;
 }
 
 .fh5co-nav {
@@ -105,6 +263,234 @@ figure {
   padding: 40px 0;
   z-index: 1001;
 }
+
+
+
+.invitation-container {
+  background-image: url('/images/rugoso.jpg');
+  background-size: cover;
+  background-position: center;
+  padding: 20px;
+  text-align: center;
+  color: #8c3d3d;
+  /* Cambia esto al color exacto que desees */
+}
+
+.header {
+  margin-bottom: 20px;
+}
+
+.divider {
+  width: 80px;
+  height: 3px;
+  background-color: #ff6f61;
+  margin: 20px auto;
+  border-radius: 5px;
+}
+
+.logo {
+  width: 100px;
+  height: 100px;
+  background-image: url('/images/icon1.png');
+  background-size: cover;
+  margin: 0 auto;
+}
+
+.details {
+  /* Fondo blanco semi-transparente */
+  padding: 20px;
+  border-radius: 10px;
+}
+
+.detail {
+  margin-bottom: 20px;
+}
+
+h1 {
+  font-size: 4rem;
+  margin-bottom: 10px;
+  margin-top: 10px;
+
+  color: #b26b6b;
+}
+
+h2 {
+  font-size: 1.5rem;
+  color: #b26b6b;
+}
+
+p {
+  font-size: 1.2rem;
+  margin-bottom: 10px;
+  color: #8c3d3d;
+}
+
+button {
+  background-color: #b26b6b;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 1rem;
+  transition: background-color 0.3s ease;
+}
+
+button:hover {
+  background-color: #8c3d3d;
+}
+
+button.inactive {
+  background-color: #e8b4b4;
+  cursor: not-allowed;
+}
+
+button.inactive:hover {
+  background-color: #e8b4b4;
+}
+
+
+
+.party-details-container {
+  background-color: #fdf3f0;
+  /* Fondo claro */
+  text-align: center;
+  padding: 40px 20px;
+  color: #5c2e2e;
+  /* Cambia esto al color exacto que desees */
+}
+
+.party-details-container h1 {
+  font-size: 2.5rem;
+  color: #a25454;
+  /* Cambia esto al color exacto que desees */
+  margin-bottom: 10px;
+}
+
+.party-details-container p {
+  font-size: 1.2rem;
+  color: #5c2e2e;
+  margin-bottom: 40px;
+}
+
+.party-details-cards {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+}
+
+.card {
+  background: #fff5f2;
+  /* Fondo blanco */
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  width: 300px;
+  margin: 10px;
+  text-align: center;
+  z-index: 100;
+}
+
+.button {
+  z-index: 10;
+}
+
+.icon {
+  width: 50px;
+  height: 50px;
+  margin: 0 auto 10px;
+  background-size: cover;
+}
+
+.music-icon {
+  background-image: url('/images/pause.png');
+}
+
+.dress-code-icon {
+  background-image: url('/images/dress.png');
+}
+
+.tips-icon {
+  background-image: url('/images/notes.png');
+}
+
+.card h2 {
+  font-size: 1.5rem;
+  color: #a25454;
+  /* Cambia esto al color exacto que desees */
+  margin-bottom: 10px;
+}
+
+.card p {
+  font-size: 1rem;
+  color: #5c2e2e;
+  margin-bottom: 20px;
+}
+
+.card button {
+  background-color: #a25454;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 1rem;
+  transition: background-color 0.3s ease;
+}
+
+.card button:hover {
+  background-color: #5c2e2e;
+}
+
+
+
+
+
+.love-portraits-container {
+  background-color: #fdf3f0;
+  /* Fondo claro */
+  text-align: center;
+  padding: 40px 20px;
+  color: #5c2e2e;
+  /* Cambia esto al color exacto que desees */
+}
+
+.love-portraits-container h1 {
+  font-size: 2.5rem;
+  color: #a25454;
+  /* Cambia esto al color exacto que desees */
+  margin-bottom: 10px;
+}
+
+.love-portraits-container p {
+  font-size: 1.2rem;
+  color: #5c2e2e;
+  margin-bottom: 40px;
+}
+
+.photos {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+
+.photo {
+  background: #fff5f2;
+  /* Fondo blanco */
+  padding: 10px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.photo img {
+  border-radius: 10px;
+  max-width: 300px;
+  width: 100%;
+  height: auto;
+}
+
+
+
 
 @media screen and (max-width: 768px) {
   .fh5co-nav {
@@ -294,7 +680,7 @@ figure {
 }
 
 .fh5co-nav ul li.btn-cta a {
-  color: #F14E95;
+  color: #cb7b0c;
 }
 
 .fh5co-nav ul li.btn-cta a span {
@@ -303,7 +689,7 @@ figure {
   display: -moz-inline-stack;
   display: inline-block;
   zoom: 1;
-  *display: inline;
+  display: inline;
   -webkit-transition: 0.3s;
   -o-transition: 0.3s;
   transition: 0.3s;
@@ -935,7 +1321,7 @@ figure {
   display: inline-block;
   zoom: 1;
   *display: inline;
-  color: #F14E95;
+  color: #cb7b0c;
   padding-left: 10px;
   padding-right: 10px;
 }
@@ -957,7 +1343,7 @@ figure {
 }
 
 .fh5co-contact-info ul li:before {
-  color: #F14E95;
+  color: #cb7b0c;
   position: absolute;
   left: 0;
   top: .05em;
@@ -1064,7 +1450,7 @@ form label {
 .fh5co-cover .display-tc .btn {
   padding: 15px 20px;
   background: #fff !important;
-  color: #F14E95;
+  color: #cb7b0c;
   border: none !important;
   font-size: 14px;
   text-transform: uppercase;
@@ -1127,6 +1513,38 @@ form label {
 .simply-countdown {
   /* The countdown */
   margin-bottom: 2em;
+
+}
+
+.title {
+  color: bisque !important;
+
+}
+
+
+@media screen and (max-width: 768px) {
+
+  .title {
+    font-size: 60px !important;
+  }
+
+}
+
+.subtitle {
+  color: beige !important;
+}
+
+.btn-agenda {
+  background-color: beige;
+  color: rgb(147, 56, 7);
+}
+
+.detail-item {
+  margin-bottom: 30px;
+}
+
+.detail-title {
+  color: darkred;
 }
 
 .simply-countdown>.simply-section {
@@ -1134,7 +1552,8 @@ form label {
   display: inline-block;
   width: 100px;
   height: 100px;
-  background: rgba(241, 78, 149, 0.8);
+  background: #a25454;
+  opacity: 80%;
   margin: 0 4px;
   -webkit-border-radius: 50%;
   -moz-border-radius: 50%;
@@ -1143,6 +1562,8 @@ form label {
   position: relative;
   animation: pulse 1s ease infinite;
 }
+
+
 
 @keyframes pulse {
   0% {
@@ -1165,6 +1586,7 @@ form label {
   height: 100px;
   width: 100px;
 }
+
 
 .simply-countdown>.simply-section .simply-amount,
 .simply-countdown>.simply-section .simply-word {
@@ -1242,7 +1664,7 @@ form label {
   font-size: 20px;
   background: #fff;
   padding: 20px;
-  color: #F14E95;
+  color: #cb7b0c;
   -webkit-border-radius: 50%;
   -moz-border-radius: 50%;
   -ms-border-radius: 50%;
@@ -1268,7 +1690,7 @@ form label {
 
 .couple-half h3 {
   font-family: "Sacramento", Arial, serif;
-  color: #F14E95;
+  color: #cb7b0c;
   font-size: 30px;
 }
 
@@ -1382,7 +1804,7 @@ form label {
   height: 90px;
   font-size: 40px;
   line-height: 40px;
-  color: #F14E95;
+  color: #cb7b0c;
 }
 
 .feature-center p,
@@ -1409,7 +1831,7 @@ form label {
   margin-bottom: 10px;
   line-height: 1.5;
   font-weight: bold;
-  color: #F14E95;
+  color: #cb7b0c;
   font-family: "Sacramento", Arial, serif;
 }
 
@@ -1450,7 +1872,7 @@ form label {
 }
 
 #fh5co-testimonial .wrap-testimony .testimony-slide span a.twitter {
-  color: #F14E95;
+  color: #cb7b0c;
   font-weight: 300;
 }
 
@@ -1557,7 +1979,7 @@ form label {
   display: table-cell;
   vertical-align: middle;
   font-size: 30px;
-  color: #F14E95;
+  color: #cb7b0c;
 }
 
 .feature-left .feature-copy {
@@ -1636,7 +2058,7 @@ form label {
 #fh5co-started .btn {
   height: 54px;
   border: none !important;
-  background: #F14E95;
+  background: #cb7b0c;
   color: #fff;
   font-size: 16px;
   text-transform: uppercase;
@@ -1691,7 +2113,7 @@ form label {
 
 .owl-carousel .owl-controls .owl-dot.active span {
   background: transparent;
-  border: 2px solid #F14E95;
+  border: 2px solid #cb7b0c;
 }
 
 #fh5co-offcanvas {
@@ -2015,9 +2437,9 @@ form label {
 }
 
 .btn-primary {
-  background: #F14E95;
+  background: #cb7b0c;
   color: #fff;
-  border: 2px solid #F14E95;
+  border: 2px solid #cb7b0c;
 }
 
 .btn-primary:hover,
@@ -2029,14 +2451,14 @@ form label {
 
 .btn-primary.btn-outline {
   background: transparent;
-  color: #F14E95;
-  border: 2px solid #F14E95;
+  color: #cb7b0c;
+  border: 2px solid #cb7b0c;
 }
 
 .btn-primary.btn-outline:hover,
 .btn-primary.btn-outline:focus,
 .btn-primary.btn-outline:active {
-  background: #F14E95;
+  background: #cb7b0c;
   color: #fff;
 }
 
@@ -2202,7 +2624,7 @@ form label {
 .form-control:focus {
   outline: none;
   box-shadow: none;
-  border-color: #F14E95;
+  border-color: #cb7b0c;
 }
 
 .row-pb-md {
@@ -2225,6 +2647,7 @@ form label {
 
 .js .animate-box {
   opacity: 0;
+  color: beige;
 }
 
 /*# sourceMappingURL=style.css.map */
