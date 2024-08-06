@@ -38,3 +38,5 @@ yarn-error.log*
 
 # config for api
 /config/api_config.json
+
+.next
