@@ -149,10 +149,9 @@ Naranja X`
   const duration = moment.duration(endDatetime.diff(startDatetime)).asHours();
 
   const [event, setEvent] = useState({
-    title: "Acara Nikah Rianti & Afif",
+    title: "Invitacion Boda Mika&Rami",
     description:
-      "Event acara resepsi nikah rianti & afif yang diselenggarakan pada tanggal 10 oktober 2021",
-    location: "Jl. Ploso IX-A no. 10, Surabaya, Jawa Timur",
+      "",
     startDatetime: startDatetime.format("YYYYMMDDTHHmmssZ"),
     endDatetime: endDatetime.format("YYYYMMDDTHHmmssZ"),
     duration,
@@ -197,10 +196,10 @@ Naranja X`
         <meta httpEquiv="X-UA-Compatible" content="IE=edge" />
         <title>Boda &mdash; Mika & Rami</title>
         <meta name="viewport" content="width=device-width, initial-scale=1" />
-        <meta name="description" content="Rianti & Afif Wedding Website" />
+        <meta name="description" content="Invitacion de Mika & Rami" />
         <meta
           name="keywords"
-          content="afif, rianti, wedding, nikah, kawin, nikahan, afif abdillah jusuf, rianti dwi lestari, akad, akad nikah, landing page, resepsi, resepsi nikah"
+          content=" "
         />
         <meta name="author" content="afif.dev" />
 
